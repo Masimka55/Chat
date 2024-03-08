@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <title>Chat</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="chat">
+        <div class="control-panel">
+          <button class="control-panel__settings" id="open-dialog">Настройки</button>
+          <button class="control-panel__exit">Выйти</button>
+        </div>
+        
+        <dialog class="settings-window" id="open-settings-window">
+          <div class="settings-window__menu">
+            <span>Настройки</span>
+            <button id="settings-window__button-cloce">
+              <img src="./img/+.svg" alt="Close button settings" />
+            </button>
+          </div>
+          
+          <div>
+            <form class="form-name-chat">
+              <label class="form-name-chat__label" for="username">Имя в чате</label>
+              <input class="form-name-chat__input" id="username" type="text" placeholder="Name" required/>
+              <button class="form-name-chat__button">→</button>
+            </form>
+          </div>
+        </dialog>
+  
+        <div class="display-chat">
+          <div class="chat-message">
+            <p class="chat-message__my-messages"> 
+              <span id="my-name-in-chat">Я:</span> 
+              Ну привет
+            </p>
+            <time class="chat-message__time">18:45</time>
+          </div>
+          
+          <div class="chat-message chat-message__interlocutor">
+            <p> 
+              <span id="name-of-the-interlocutor">Собеседник:</span> <!-- имя Собеседника -->
+              Привет как дела?
+            </p>
+            <time class="chat-message__time">18:45</time>
+          </div>
+  
+          <template id="template-message">
+            <div class="chat-message">
+              <p class="chat-message__my-messages"> 
+                <span id="my-name-in-chat">Я:</span> 
+                Ну привет
+              </p>
+              <time class="chat-message__time">18:45</time>
+            </div>
+          </template>
+        </div>
+  
+        <div>
+          <form class="form-chat">
+            <input class="form-chat__input" type="text" placeholder="Введите сообщение" required />
+            <button class="form-chat__button" type="submit">→</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <script type="module" src="./js/main.js"></script>
+  </body> 
+</html>
+   
+
